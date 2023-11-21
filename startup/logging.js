@@ -4,6 +4,7 @@ require('express-async-errors');//Cut and pasted for index.js
 
 module.exports = function() {
   winston.handleExceptions(//This code block for setting up winston was moved here from index.js
+    new winston.transports.Console({ colorize: true, prettyPrint: true }),//Enables winston to print logging logs to console.
     new winston.transports.File({ filename: 'uncaughtExceptions.log' }));
   
   process.on('unhandledRejection', (ex) => {
