@@ -1,9 +1,9 @@
-const winston = require('winston');
-require('winston-mongodb');
-require('express-async-errors');
+const winston = require('winston');//Cut and pasted from index.js
+require('winston-mongodb');//Cut and pasted for index.js
+require('express-async-errors');//Cut and pasted for index.js
 
 module.exports = function() {
-  winston.handleExceptions(
+  winston.handleExceptions(//This code block for setting up winston was moved here from index.js
     new winston.transports.File({ filename: 'uncaughtExceptions.log' }));
   
   process.on('unhandledRejection', (ex) => {
