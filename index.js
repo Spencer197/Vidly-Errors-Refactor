@@ -4,7 +4,7 @@ const app = express();
 
 require('./startup/logging');
 require('./startup/routes')(app);//Loads startup/routes module, returns function to call app obj. 
-require('./startup/db')();
+require('./startup/db')();//Load startup/db and call the returned function ().
 require('./startup/config')();
 require('./startup/validation')();
 
