@@ -6,3 +6,5 @@
 
    # Ignore the distribution directory
    dist/
+
+   ._package-lock.json
